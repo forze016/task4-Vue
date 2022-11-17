@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="shortcut icon" href="./img/fabicon.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assent/style.css">
+</head>
+
+<body>
+
+    <header class="conteiner_header">
+        <figure>
+        <img src="./assent/Logo_Amazing_Events.png" alt="Logo">
+    </figure>
+    <div class="Botones">
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./upcoming.html">Upcoming_Events</a>
+            <a href="./pastevents.html">Past_Events</a>
+            <a href="./contacts.html">Contact</a>
+            <a href="./stats.html">Stats</a>
+        </nav>
+    </div>
+</header>
+
+    <main>
+
+    <div class="titulo">
+        <h1>Details</h1>
+    </div>
+
+    <div class="cartaDetalle" id="container">
+        <div class="card rounded-4 cartaGrande" style="width: 16rem; height: 23rem;">
+            <img :src="image" class="card-img-top" :alt="title">
+            <div class="card-body ">
+                <h5 class="card-title text-center">{{title}}</h5>
+                <p class="card-text text-center">{{description}}</p>
+                <p class="card-text"><span class="fw-bold" >Date</span>: {{date}}</p>
+                <p class="card-text"><span class="fw-bold" >Category</span>: {{category}}</p>
+                <p class="card-text"><span class="fw-bold" >Place</span>: {{place}}</p>
+                <p class="card-text"><span class="fw-bold" >Capacity</span>: {{capacity}}</p>
+                <p class="card-text" v-if="assistance != undefined"><span class="fw-bold" >Assistance</span>: {{assistance}}</p>
+                <p class="card-text"><span class="fw-bold" >Price</span>: {{price}}</p>
+                <p class="card-text" v-if="estimate != undefined"><span class="fw-bold" >Estimate</span>: {{estimate}}</p>
+            </div>
+        </div>
+    </div>
+
+
+        <footer>
+            <div class="footer2">
+                <div class="mover">
+                    <img src="./assent/Instragram.png" alt="">
+                    <img src="./assent/facebook.png" alt="">
+                    <img src="./assent/whatshapp.png" alt="">
+                </div>
+                <div class="mover">
+                    <p class="h2">Cohort 37/38</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script src="./details.js"></script>
+</body>
+
+</html>
